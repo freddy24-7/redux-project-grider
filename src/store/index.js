@@ -6,6 +6,8 @@ const songsSlice = createSlice({
     reducers: {
         addSong(state, action) {
             state.push(action.payload);
+            //Here "state" is an array, see below rule in console.log
+            console.log(state.length);
         },
         removeSong(state, action) {
             // return state.filter((song) => song !== action.payload);
