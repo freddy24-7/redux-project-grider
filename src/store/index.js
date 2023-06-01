@@ -19,4 +19,16 @@ const store = configureStore({
     }
 });
 
+//These console.logs indicates how the store and action creators work
 console.log(store);
+console.log(songsSlice.actions);
+
+const startingState = store.getState();
+console.log(JSON.stringify(startingState));
+
+store.dispatch(songsSlice.actions.addSong('song1'))
+
+const endingState = store.getState();
+console.log(JSON.stringify(endingState));
+
+export { store };
