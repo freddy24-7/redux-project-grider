@@ -1,10 +1,28 @@
-# Getting Started with Create React App
+# Credits
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The code for this project is based on the Steven Grider course [Modern React with Redux](https://www.udemy.com/course/react-redux/).
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+The project uses ES modules for importing dependencies and components.
+
+The entry point of the application is the App component, which is rendered by the createRoot function from react-dom/client.
+
+The App component is wrapped in a Provider component from react-redux, which provides the Redux store to all components.
+
+The App component contains a button to reset both playlists and renders the MoviePlaylist and SongPlaylist components.
+
+The MoviePlaylist component displays a list of movies and provides functionality to add and remove movies from the list.
+
+The SongPlaylist component displays a list of songs and provides functionality to add and remove songs from the list.
+
+The Redux store is configured using the configureStore function from @reduxjs/toolkit. It combines the songsReducer and moviesReducer to manage the state for songs and movies.
+
+The songsReducer and moviesReducer are created using the createSlice function from @reduxjs/toolkit. They define the initial state and handle actions to add, remove, and reset the playlists.
+
+The reset action is created using the createAction function from @reduxjs/toolkit. It is used in both reducers to reset the respective playlists.
+
+The createRandomMovie and createRandomSong functions are utility functions that generate random movie and song names using the faker library.
 
 ### `npm start`
 

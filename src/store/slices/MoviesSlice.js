@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {reset} from "./../actions";
+import {reset} from "../actions";
 
 const moviesSlice = createSlice({
     name: 'movie',
